@@ -1,0 +1,78 @@
+/* You can add global styles to this file, and also import other style files */
+.app-sidenav-container {
+  /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+     causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+  flex: 1;
+  z-index: 2;
+}
+.app-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  .toolbar{
+    height: 80px;
+    padding: 0;
+    align-items: stretch;
+  }
+
+  .sidenav {
+    width: 220px;
+    border-right: none;
+
+    .sidenav-header {
+      min-height: 80px;
+      box-sizing: border-box;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+      .logo{
+        margin: 2px 0 0 14px;
+      }
+    }
+
+    .sidenav-footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.16);
+      padding-bottom: 16px;
+    }
+
+    .item-active {
+      background: red;
+      color: white!important;
+    }
+
+    .mat-list-base {
+      .mat-list-item {
+        font-weight: 300;
+        box-sizing: border-box;
+        padding: 0 14px;
+
+        &:hover {
+          opacity: 0.8;
+          background-color: #383448;
+          color: white!important;
+        }
+      }
+    }
+  }
+
+  .main-content-wrap{
+    padding: 15px;
+  }
+}
+
+.user-img-wrap{
+ display: flex;
+  justify-content: flex-end;
+  padding-right: 15px;
+  margin-top: -15px;
+}
+app-header {
+  width: 100%;
+}
+
+.table {
+  width: 100%;
+}
